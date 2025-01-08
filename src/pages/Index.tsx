@@ -1,8 +1,19 @@
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 const Index = () => {
+  const [position, setPosition] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPosition((prev) => (prev >= window.innerWidth ? -300 : prev + 5));
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="min-h-screen relative flex flex-col items-center justify-center">
+    <div className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -10,6 +21,22 @@ const Index = () => {
           alt="xDicks Collection"
           className="w-full h-full object-cover opacity-10"
         />
+      </div>
+      
+      {/* Floating Image */}
+      <div 
+        style={{ 
+          left: `${position}px`,
+          top: '20%'
+        }} 
+        className="absolute z-20 flex flex-col items-center"
+      >
+        <img 
+          src="/lovable-uploads/f8622061-71d7-4b88-af36-ddc6dfb5a047.png" 
+          alt="Dickhead"
+          className="w-32 h-32 object-contain"
+        />
+        <p className="text-xl font-bold text-comic-red mt-2">F**k You!</p>
       </div>
       
       {/* Content */}
