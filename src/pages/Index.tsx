@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { Facebook, Twitter, Github, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Github } from "lucide-react";
 
 const Index = () => {
   const [hearts, setHearts] = useState<Array<{ id: number; left: number; top: number }>>([]);
@@ -50,7 +50,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-[#1A1F2C]">
+    <div className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-[#F1F0FB]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -102,6 +102,9 @@ const Index = () => {
         </div>
 
         <p className="text-2xl italic text-comic-blue">"We know when it's time to grow"</p>
+        
+        {/* New Quote */}
+        <p className="text-xl text-comic-red italic">"What do you call a cheap circumcision? A ripoff."</p>
         
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6">
