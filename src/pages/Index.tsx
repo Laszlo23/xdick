@@ -13,7 +13,7 @@ import {
 
 const nfts = Array.from({ length: 10 }, (_, i) => ({
   id: i + 1,
-  name: `Penise Face #${i + 1}`,
+  name: `xDick #${i + 1}`,
   perks: [
     "Access to exclusive memes",
     "Monthly joke airdrops",
@@ -37,41 +37,45 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-20 min-h-screen bg-comic-yellow flex items-center relative overflow-hidden">
-        <div className="container mx-auto px-4 py-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-6xl font-bold mb-6 animate-float">
-                Welcome to Penise Faces! 🤪
-              </h1>
-              <p className="text-xl mb-8">
-                The most hilarious NFT collection that will make your wallet smile!
-              </p>
-              <Button size="lg" className="bg-comic-blue hover:bg-comic-blue/90 animate-wiggle">
-                Join the Fun!
-              </Button>
+      <section className="h-screen bg-comic-yellow flex items-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="container mx-auto px-4 relative z-20 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-8xl font-bold mb-6 animate-float">
+              xDicks NFT
+            </h1>
+            <div className="space-y-4 text-2xl font-bold mb-8">
+              <p>We Fuck</p>
+              <p>We Talk</p>
+              <p>We Love</p>
+              <p>We Are The Change That Is Needed</p>
             </div>
-            <div className="relative">
-              <div className="aspect-square bg-white rounded-full p-8 shadow-2xl">
-                <span className="text-9xl">🤪</span>
-              </div>
-            </div>
+            <Button size="lg" className="bg-comic-blue hover:bg-comic-blue/90 animate-wiggle">
+              Join the Revolution!
+            </Button>
           </div>
+        </div>
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/lovable-uploads/38547c48-0e79-4bba-b64f-5c26a973abf1.png" 
+            alt="Hero Background"
+            className="w-full h-full object-cover opacity-50"
+          />
         </div>
       </section>
 
       {/* About Section */}
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">About The Project</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center">About xDicks</h2>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-xl text-gray-600 mb-8">
-              Penise Faces is not just another NFT collection - it's a community of
-              fun-loving individuals who appreciate the lighter side of crypto!
+              xDicks is not just another NFT collection - it's a movement of rebels
+              who dare to be different and make a statement in the crypto world!
             </p>
             <p className="text-xl text-gray-600">
-              Each Penise Face is uniquely generated to bring joy and laughter to
-              your digital wallet.
+              Each xDick is uniquely generated to represent the boldness and
+              creativity of our community.
             </p>
           </div>
         </div>
@@ -105,13 +109,13 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 bg-comic-blue text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-8">Why So Serious? 🃏</h2>
+          <h2 className="text-4xl font-bold mb-8">Ready to Get xDicked? 🍌</h2>
           <p className="text-xl mb-8">
-            Join us now and get your very own Penise Face! 
-            Warning: May cause uncontrollable laughter and FOMO.
+            Join our community of rebels and revolutionaries! 
+            Warning: Side effects may include uncontrollable laughter and FOMO.
           </p>
           <Button size="lg" variant="secondary" className="animate-wiggle">
-            Mint Now!
+            Mint Your xDick!
           </Button>
         </div>
       </section>
@@ -123,15 +127,15 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center p-6 bg-gray-50 rounded-lg">
               <h3 className="text-xl font-bold mb-4">Community</h3>
-              <p>Building the most fun-loving community in Web3</p>
+              <p>Building the most rebellious community in Web3</p>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-lg">
               <h3 className="text-xl font-bold mb-4">Innovation</h3>
-              <p>Pushing the boundaries of digital humor</p>
+              <p>Pushing the boundaries of digital expression</p>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Value</h3>
-              <p>Creating lasting value through laughter</p>
+              <h3 className="text-xl font-bold mb-4">Revolution</h3>
+              <p>Creating lasting change through bold statements</p>
             </div>
           </div>
         </div>
