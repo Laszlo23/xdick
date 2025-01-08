@@ -105,7 +105,7 @@ const Index = () => {
         
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
+          <a href="https://www.facebook.com/profile.php?id=61571499762060" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
             <Facebook size={32} />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
