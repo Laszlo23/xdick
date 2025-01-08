@@ -105,16 +105,16 @@ const Index = () => {
         
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6">
-          <a href="#" className="text-comic-blue hover:text-comic-red transition-colors">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
             <Facebook size={32} />
           </a>
-          <a href="#" className="text-comic-blue hover:text-comic-red transition-colors">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
             <Twitter size={32} />
           </a>
-          <a href="#" className="text-comic-blue hover:text-comic-red transition-colors">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
             <Github size={32} />
           </a>
-          <a href="#" className="text-comic-blue hover:text-comic-red transition-colors">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
             <Linkedin size={32} />
           </a>
         </div>
