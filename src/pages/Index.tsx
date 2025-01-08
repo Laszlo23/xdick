@@ -108,7 +108,7 @@ const Index = () => {
           <a href="https://www.facebook.com/profile.php?id=61571499762060" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
             <Facebook size={32} />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
+          <a href="https://x.com/xDickHeads" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
             <Twitter size={32} />
           </a>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
