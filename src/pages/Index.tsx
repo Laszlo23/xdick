@@ -51,9 +51,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-[#1A1F2C]">
-      {/* Background Image with darker overlay */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black opacity-80"></div>
         <img 
           src="/lovable-uploads/b4906139-cbf0-46fb-b58a-ab9b673d3c87.png" 
           alt="xDicks Collection"
