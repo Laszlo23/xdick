@@ -3,13 +3,41 @@ import { useEffect, useState } from "react";
 
 const Index = () => {
   const [position, setPosition] = useState(0);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
 
+  // Animation effect for floating image
   useEffect(() => {
     const interval = setInterval(() => {
       setPosition((prev) => (prev >= window.innerWidth ? -300 : prev + 5));
     }, 50);
 
     return () => clearInterval(interval);
+  }, []);
+
+  // Countdown effect
+  useEffect(() => {
+    // Set target date to 30 days from now
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 30);
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate.getTime() - now;
+
+      setTimeLeft({
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000)
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -45,6 +73,27 @@ const Index = () => {
           xDick
         </h1>
         <p className="text-4xl font-bold text-comic-red">Coming Soon</p>
+        
+        {/* Countdown Timer */}
+        <div className="flex gap-4 justify-center">
+          <div className="bg-comic-blue/10 p-4 rounded-lg">
+            <span className="text-4xl font-bold text-comic-blue">{timeLeft.days}</span>
+            <p className="text-sm text-comic-blue">Days</p>
+          </div>
+          <div className="bg-comic-blue/10 p-4 rounded-lg">
+            <span className="text-4xl font-bold text-comic-blue">{timeLeft.hours}</span>
+            <p className="text-sm text-comic-blue">Hours</p>
+          </div>
+          <div className="bg-comic-blue/10 p-4 rounded-lg">
+            <span className="text-4xl font-bold text-comic-blue">{timeLeft.minutes}</span>
+            <p className="text-sm text-comic-blue">Minutes</p>
+          </div>
+          <div className="bg-comic-blue/10 p-4 rounded-lg">
+            <span className="text-4xl font-bold text-comic-blue">{timeLeft.seconds}</span>
+            <p className="text-sm text-comic-blue">Seconds</p>
+          </div>
+        </div>
+
         <p className="text-2xl italic text-comic-blue">"We know when it's time to grow"</p>
         <div className="mt-8">
           <Button 
