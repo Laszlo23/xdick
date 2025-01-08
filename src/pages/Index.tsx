@@ -114,9 +114,6 @@ const Index = () => {
           <a href="https://github.com/Laszlo23/xdick.git" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
             <Github size={32} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
-            <Linkedin size={32} />
-          </a>
         </div>
 
         <div className="mt-8">
