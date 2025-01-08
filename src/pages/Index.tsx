@@ -15,9 +15,10 @@ const Index = () => {
       {/* Content */}
       <div className="relative z-10 text-center space-y-8">
         <h1 className="text-8xl font-bold mb-6 animate-float text-comic-blue">
-          xDicks
+          xDick
         </h1>
         <p className="text-4xl font-bold text-comic-red">Coming Soon</p>
+        <p className="text-2xl italic text-comic-blue">"We know when it's time to grow"</p>
         <div className="mt-8">
           <Button 
             size="lg" 
