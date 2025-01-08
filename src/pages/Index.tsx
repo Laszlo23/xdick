@@ -23,7 +23,7 @@ const Index = () => {
           <Button 
             size="lg" 
             className="bg-comic-blue hover:bg-comic-blue/90 animate-wiggle"
-            onClick={() => window.open('https://t.me/xDicks', '_blank')}
+            onClick={() => window.open('https://t.me/+85Jbnv4cd942M2Nk', '_blank')}
           >
             Join us on Telegram
           </Button>
