@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { Facebook, Twitter, Github } from "lucide-react";
 
 const Index = () => {
   const [position, setPosition] = useState(0);
@@ -95,6 +96,20 @@ const Index = () => {
         </div>
 
         <p className="text-2xl italic text-comic-blue">"We know when it's time to grow"</p>
+        
+        {/* Social Media Icons */}
+        <div className="flex justify-center space-x-6">
+          <a href="#" className="text-comic-blue hover:text-comic-red transition-colors">
+            <Facebook size={32} />
+          </a>
+          <a href="#" className="text-comic-blue hover:text-comic-red transition-colors">
+            <Twitter size={32} />
+          </a>
+          <a href="#" className="text-comic-blue hover:text-comic-red transition-colors">
+            <Github size={32} />
+          </a>
+        </div>
+
         <div className="mt-8">
           <Button 
             size="lg" 
