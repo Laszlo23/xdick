@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Facebook, Twitter, Github, Linkedin } from "lucide-react";
 
 const Index = () => {
-  const [position, setPosition] = useState(0);
   const [hearts, setHearts] = useState<Array<{ id: number; left: number; top: number }>>([]);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -11,15 +10,6 @@ const Index = () => {
     minutes: 0,
     seconds: 0
   });
-
-  // Animation effect for floating image
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPosition((prev) => (prev >= window.innerWidth ? -300 : prev + 5));
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, []);
 
   // Hearts animation
   useEffect(() => {
@@ -84,22 +74,6 @@ const Index = () => {
           <span className="text-2xl text-comic-red">❤️</span>
         </div>
       ))}
-      
-      {/* Floating Image */}
-      <div 
-        style={{ 
-          left: `${position}px`,
-          top: '20%'
-        }} 
-        className="absolute z-20 flex flex-col items-center"
-      >
-        <img 
-          src="/lovable-uploads/f8622061-71d7-4b88-af36-ddc6dfb5a047.png" 
-          alt="Dickhead"
-          className="w-32 h-32 object-contain"
-        />
-        <p className="text-xl font-bold text-comic-red mt-2">F**k You!</p>
-      </div>
       
       {/* Content */}
       <div className="relative z-10 text-center space-y-8">
