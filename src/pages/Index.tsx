@@ -1,134 +1,125 @@
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
-import { Facebook, Twitter, Github } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
-  const [hearts, setHearts] = useState<Array<{ id: number; left: number; top: number }>>([]);
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-
-  // Hearts animation
-  useEffect(() => {
-    const createHeart = () => {
-      const id = Date.now();
-      const left = Math.random() * window.innerWidth;
-      const top = Math.random() * window.innerHeight;
-      
-      setHearts(prev => [...prev, { id, left, top }]);
-      
-      setTimeout(() => {
-        setHearts(prev => prev.filter(heart => heart.id !== id));
-      }, 5000);
-    };
-
-    const heartInterval = setInterval(createHeart, 2000);
-    return () => clearInterval(heartInterval);
-  }, []);
-
-  useEffect(() => {
-    // Set target date to 30 days from now
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 30);
-
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate.getTime() - now;
-
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000)
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <div className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-[#F1F0FB]">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/lovable-uploads/b4906139-cbf0-46fb-b58a-ab9b673d3c87.png" 
-          alt="xDicks Collection"
-          className="w-full h-full object-cover opacity-5"
-        />
-      </div>
-
-      {/* Animated Hearts */}
-      {hearts.map(heart => (
-        <div
-          key={heart.id}
-          className="absolute z-10 animate-float pointer-events-none"
-          style={{
-            left: `${heart.left}px`,
-            top: `${heart.top}px`,
-          }}
-        >
-          <span className="text-2xl text-comic-red">❤️</span>
-        </div>
-      ))}
-      
-      {/* Content */}
-      <div className="relative z-10 text-center space-y-8">
-        <h1 className="text-8xl font-bold mb-6 animate-float text-comic-blue">
-          xDick
-        </h1>
-        <p className="text-4xl font-bold text-comic-red">Coming Soon</p>
-        
-        {/* Countdown Timer */}
-        <div className="flex gap-4 justify-center">
-          <div className="bg-comic-blue/10 p-4 rounded-lg backdrop-blur-sm">
-            <span className="text-4xl font-bold text-comic-blue">{timeLeft.days}</span>
-            <p className="text-sm text-comic-blue">Days</p>
-          </div>
-          <div className="bg-comic-blue/10 p-4 rounded-lg backdrop-blur-sm">
-            <span className="text-4xl font-bold text-comic-blue">{timeLeft.hours}</span>
-            <p className="text-sm text-comic-blue">Hours</p>
-          </div>
-          <div className="bg-comic-blue/10 p-4 rounded-lg backdrop-blur-sm">
-            <span className="text-4xl font-bold text-comic-blue">{timeLeft.minutes}</span>
-            <p className="text-sm text-comic-blue">Minutes</p>
-          </div>
-          <div className="bg-comic-blue/10 p-4 rounded-lg backdrop-blur-sm">
-            <span className="text-4xl font-bold text-comic-blue">{timeLeft.seconds}</span>
-            <p className="text-sm text-comic-blue">Seconds</p>
-          </div>
-        </div>
-
-        <p className="text-2xl italic text-comic-blue">"We know when it's time to grow"</p>
-        
-        {/* New Quote */}
-        <p className="text-xl text-comic-red italic">"What do you call a cheap circumcision? A ripoff."</p>
-        
-        {/* Social Media Icons */}
-        <div className="flex justify-center space-x-6">
-          <a href="https://www.facebook.com/profile.php?id=61571499762060" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
-            <Facebook size={32} />
-          </a>
-          <a href="https://x.com/xDickHeads" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
-            <Twitter size={32} />
-          </a>
-          <a href="https://github.com/Laszlo23/xdick.git" target="_blank" rel="noopener noreferrer" className="text-comic-blue hover:text-comic-red transition-colors">
-            <Github size={32} />
-          </a>
-        </div>
-
-        <div className="mt-8">
+    <div className="min-h-screen bg-[#F1F0FB] text-black">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="max-w-4xl mx-auto text-left">
+          <h1 className="text-6xl font-bold mb-6">
+            THE NEW VAPORVAWE XDICK NFT COLLECTION
+          </h1>
+          <p className="text-xl mb-8 text-gray-600">
+            Meet the notorious xDicks – the creatures from your dreams and nightmares, and quite possibly from under your bed... Don't look down!
+          </p>
           <Button 
-            size="lg" 
-            className="bg-comic-blue hover:bg-comic-blue/90 animate-wiggle"
-            onClick={() => window.open('https://t.me/+85Jbnv4cd942M2Nk', '_blank')}
+            size="lg"
+            className="bg-[#0066FF] hover:bg-[#0052CC] text-white px-8 py-6 text-lg rounded-full"
+            onClick={() => window.open('https://opensea.io', '_blank')}
           >
-            Join us on Telegram
+            BUY ON OPENSEA
           </Button>
         </div>
-      </div>
+      </section>
+
+      {/* Collections Section */}
+      <section className="container mx-auto px-4 py-20 bg-white rounded-3xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-2">Vaporwave collection</h3>
+            <p className="text-gray-600">Get nostalgic about the 90s rave and soft electronic music</p>
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-2">Cyberpunk collection</h3>
+            <p className="text-gray-600">Tech cartoony xDicks for their geeky tech fans</p>
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-2">Acid neon collection</h3>
+            <p className="text-gray-600">Brighten up your art collection with these colorful characters</p>
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-2">Mystic cult collection</h3>
+            <p className="text-gray-600">Uncanny and ghostly flair for those who like it spooky</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="container mx-auto px-4 py-20">
+        <h2 className="text-4xl font-bold mb-12">BEHOLD: THEIR MAJESTY</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div>
+            <div className="text-5xl font-bold text-[#0066FF] mb-4">80%</div>
+            <h3 className="text-xl font-bold mb-2">NFTs bought at pre-launch</h3>
+            <p className="text-gray-600">The last collection we launched was sold out on day 5 – and the start was quite impressive, too.</p>
+          </div>
+          <div>
+            <div className="text-5xl font-bold text-[#0066FF] mb-4">15</div>
+            <h3 className="text-xl font-bold mb-2">Highest sale</h3>
+            <p className="text-gray-600">These items are not to be looked down upon: this is something you'll boast about – or profitably resell.</p>
+          </div>
+          <div>
+            <div className="text-5xl font-bold text-[#0066FF] mb-4">+3K</div>
+            <h3 className="text-xl font-bold mb-2">Top-notch pieces of art</h3>
+            <p className="text-gray-600">Our incredibly productive artists and designers have embodied all their inspiration in these NFTs.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="container mx-auto px-4 py-20">
+        <h2 className="text-4xl font-bold mb-12">WAIT, I NEED TO KNOW SOMETHING...</h2>
+        <div className="space-y-6 max-w-3xl mx-auto">
+          {[
+            "What are NFTs?",
+            "How do I get one?",
+            "How do I make sure my NFT is unique?",
+            "Can I resell my NFT?"
+          ].map((question, index) => (
+            <div 
+              key={index}
+              className="flex items-center justify-between p-6 bg-white rounded-xl hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => console.log(`Clicked ${question}`)}
+            >
+              <span className="text-xl font-bold">{question}</span>
+              <ArrowRight className="text-[#0066FF]" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Prime Membership Section */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="bg-[#0066FF] text-white rounded-3xl p-12 text-center">
+          <h2 className="text-4xl font-bold mb-6">PRIME MEMBERSHIP</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            If you're not too impressed yet, get ready for this: more stuff is available with the Pro subscription! Get pre-launch access to the market drops and exclusive collections of the best NFT collection in the observable universe.
+          </p>
+          <Button 
+            variant="outline" 
+            size="lg"
+            className="bg-white text-[#0066FF] hover:bg-gray-100 px-8 py-6 text-lg rounded-full"
+          >
+            GIMME MY PRO ACCESS!
+          </Button>
+        </div>
+      </section>
+
+      {/* Social Links */}
+      <footer className="container mx-auto px-4 py-8">
+        <div className="flex justify-center space-x-6">
+          <a href="https://www.facebook.com/profile.php?id=61571499762060" target="_blank" rel="noopener noreferrer" className="text-[#0066FF] hover:text-[#0052CC] transition-colors">
+            Facebook
+          </a>
+          <a href="https://x.com/xDickHeads" target="_blank" rel="noopener noreferrer" className="text-[#0066FF] hover:text-[#0052CC] transition-colors">
+            Twitter
+          </a>
+          <a href="https://github.com/Laszlo23/xdick.git" target="_blank" rel="noopener noreferrer" className="text-[#0066FF] hover:text-[#0052CC] transition-colors">
+            GitHub
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
