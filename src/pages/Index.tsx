@@ -11,10 +11,10 @@ const Index = () => {
       <section className="container mx-auto px-4 pt-32 pb-20">
         <div className="max-w-4xl">
           <h1 className="text-6xl font-bold mb-6" style={{ fontFamily: 'Impact, sans-serif' }}>
-            THE NEW VAPORVAWE FREAKZER NFT COLLECTION
+            THE NEW xDICK NFT COLLECTION
           </h1>
           <p className="text-xl mb-8 text-gray-600">
-            Meet the notorious Freakzers – the creatures from your dreams and nightmares, and quite possibly from under your bed... Don't look down!
+            Meet the notorious xDicks – the creatures from your dreams and nightmares, and quite possibly from under your bed... Don't look down!
           </p>
           <Button 
             size="lg"
@@ -34,25 +34,26 @@ const Index = () => {
           <img src="/lovable-uploads/62d629d9-1b6c-4249-8953-d5124ad2726e.png" alt="Character 5" className="w-full h-auto rounded-full bg-purple-200 p-4 hover:scale-110 transition-transform" />
           <img src="/lovable-uploads/f7b63aca-7a6e-44d0-8516-952a849cee75.png" alt="Character 6" className="w-full h-auto rounded-full bg-orange-200 p-4 hover:scale-110 transition-transform" />
         </div>
+
       </section>
 
       {/* Collections Section */}
       <section className="container mx-auto px-4 py-20 bg-white rounded-3xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">Vaporwave collection</h3>
-            <p className="text-gray-600">Get nostalgic about the 90s rave and soft electronic music</p>
+            <h3 className="text-xl font-bold mb-2">xDick Classic Collection</h3>
+            <p className="text-gray-600">Get nostalgic about the original xDick designs</p>
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">Cyberpunk collection</h3>
+            <h3 className="text-xl font-bold mb-2">xDick Tech Collection</h3>
             <p className="text-gray-600">Tech cartoony xDicks for their geeky tech fans</p>
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">Acid neon collection</h3>
-            <p className="text-gray-600">Brighten up your art collection with these colorful characters</p>
+            <h3 className="text-xl font-bold mb-2">xDick Neon Collection</h3>
+            <p className="text-gray-600">Brighten up your art collection with these colorful xDicks</p>
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">Mystic cult collection</h3>
+            <h3 className="text-xl font-bold mb-2">xDick Mystic Collection</h3>
             <p className="text-gray-600">Uncanny and ghostly flair for those who like it spooky</p>
           </div>
         </div>
