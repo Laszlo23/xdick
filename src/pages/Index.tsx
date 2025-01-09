@@ -93,11 +93,11 @@ const Index = () => {
           ].map((question, index) => (
             <div 
               key={index}
-              className="flex items-center justify-between p-6 bg-white rounded-xl hover:shadow-lg transition-shadow cursor-pointer"
+              className="flex items-center justify-between p-6 bg-white rounded-xl hover:shadow-lg transition-shadow cursor-pointer group"
               onClick={() => console.log(`Clicked ${question}`)}
             >
               <span className="text-xl font-bold">{question}</span>
-              <ArrowRight className="text-[#0066FF]" />
+              <ArrowRight className="text-[#0066FF] transition-transform group-hover:translate-x-2" />
             </div>
           ))}
         </div>
