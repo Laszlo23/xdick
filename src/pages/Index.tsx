@@ -1,17 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-[#F1F0FB] text-black">
+      <Navbar />
+      
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-left">
-          <h1 className="text-6xl font-bold mb-6">
-            THE NEW VAPORVAWE XDICK NFT COLLECTION
+      <section className="container mx-auto px-4 pt-32 pb-20">
+        <div className="max-w-4xl">
+          <h1 className="text-6xl font-bold mb-6" style={{ fontFamily: 'Impact, sans-serif' }}>
+            THE NEW VAPORVAWE FREAKZER NFT COLLECTION
           </h1>
           <p className="text-xl mb-8 text-gray-600">
-            Meet the notorious xDicks – the creatures from your dreams and nightmares, and quite possibly from under your bed... Don't look down!
+            Meet the notorious Freakzers – the creatures from your dreams and nightmares, and quite possibly from under your bed... Don't look down!
           </p>
           <Button 
             size="lg"
@@ -20,6 +22,16 @@ const Index = () => {
           >
             BUY ON OPENSEA
           </Button>
+        </div>
+        
+        {/* Character Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-16">
+          <img src="/lovable-uploads/420cc069-f2b6-4b4b-9fde-6137e9f7ceee.png" alt="Character 1" className="w-full h-auto rounded-full bg-pink-200 p-4 hover:scale-110 transition-transform" />
+          <img src="/lovable-uploads/4ef1f7e3-232a-4005-bd45-67561ee2beef.png" alt="Character 2" className="w-full h-auto rounded-full bg-blue-200 p-4 hover:scale-110 transition-transform" />
+          <img src="/lovable-uploads/93a8d387-667c-4984-a691-5a229a298279.png" alt="Character 3" className="w-full h-auto rounded-full bg-yellow-200 p-4 hover:scale-110 transition-transform" />
+          <img src="/lovable-uploads/33fabd6f-5719-47be-8a67-7aada2ede8df.png" alt="Character 4" className="w-full h-auto rounded-full bg-green-200 p-4 hover:scale-110 transition-transform" />
+          <img src="/lovable-uploads/62d629d9-1b6c-4249-8953-d5124ad2726e.png" alt="Character 5" className="w-full h-auto rounded-full bg-purple-200 p-4 hover:scale-110 transition-transform" />
+          <img src="/lovable-uploads/f7b63aca-7a6e-44d0-8516-952a849cee75.png" alt="Character 6" className="w-full h-auto rounded-full bg-orange-200 p-4 hover:scale-110 transition-transform" />
         </div>
       </section>
 

@@ -7,13 +7,13 @@ import {
 } from "./ui/sheet";
 
 const Navbar = () => {
-  const menuItems = ["Home", "About", "NFTs", "Vision", "Partners"];
+  const menuItems = ["Roadmap", "FAQ", "Reviews", "About", "Post", "404", "Dark Version"];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-md">
+    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-comic-blue">Penise Faces</div>
+          <div className="text-2xl font-bold" style={{ fontFamily: 'Impact, sans-serif' }}>FREAKZERS</div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
@@ -21,11 +21,24 @@ const Navbar = () => {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-600 hover:text-comic-blue transition-colors"
+                className="text-gray-600 hover:text-black transition-colors"
               >
                 {item}
               </a>
             ))}
+          </div>
+
+          {/* Social Icons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a href="https://github.com/Laszlo23/xdick.git" target="_blank" rel="noopener noreferrer">
+              <img src="/lovable-uploads/f8622061-71d7-4b88-af36-ddc6dfb5a047.png" alt="GitHub" className="w-6 h-6" />
+            </a>
+            <a href="https://discord.gg/freakzers" target="_blank" rel="noopener noreferrer">
+              <img src="/lovable-uploads/38547c48-0e79-4bba-b64f-5c26a973abf1.png" alt="Discord" className="w-6 h-6" />
+            </a>
+            <a href="https://x.com/xDickHeads" target="_blank" rel="noopener noreferrer">
+              <img src="/lovable-uploads/b4906139-cbf0-46fb-b58a-ab9b673d3c87.png" alt="Twitter" className="w-6 h-6" />
+            </a>
           </div>
 
           {/* Mobile Menu */}
@@ -41,7 +54,7 @@ const Navbar = () => {
                   <a
                     key={item}
                     href={`#${item.toLowerCase()}`}
-                    className="text-gray-600 hover:text-comic-blue transition-colors"
+                    className="text-gray-600 hover:text-black transition-colors"
                   >
                     {item}
                   </a>
