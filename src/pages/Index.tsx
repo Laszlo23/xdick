@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   return (
