@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold" style={{ fontFamily: 'Impact, sans-serif' }}>FREAKZERS</div>
+          <div className="text-2xl font-bold" style={{ fontFamily: 'Impact, sans-serif' }}>xDICK</div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
