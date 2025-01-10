@@ -28,12 +28,12 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-32 pb-20">
-        <div className="max-w-4xl">
-          <h1 className="text-6xl font-bold mb-6" style={{ fontFamily: 'Impact, sans-serif' }}>
+      <section className="min-h-screen flex items-center justify-center relative bg-gradient-to-b from-[#F1F0FB] to-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-8xl font-black mb-6 tracking-tighter" style={{ fontFamily: 'Impact, sans-serif' }}>
             THE NEW xDICK NFT COLLECTION
           </h1>
-          <p className="text-xl mb-8 text-gray-600">
+          <p className="text-2xl mb-8 text-gray-600 max-w-3xl mx-auto">
             Meet the notorious xDicks – the creatures from your dreams and nightmares, and quite possibly from under your bed... Don't look down!
           </p>
           <Button 
@@ -43,18 +43,37 @@ const Index = () => {
           >
             BUY ON OPENSEA
           </Button>
+          
+          {/* Character Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-16">
+            <img src="/lovable-uploads/420cc069-f2b6-4b4b-9fde-6137e9f7ceee.png" alt="Character 1" className="w-full h-auto rounded-full bg-pink-200 p-4 hover:scale-110 transition-transform animate-float" />
+            <img src="/lovable-uploads/4ef1f7e3-232a-4005-bd45-67561ee2beef.png" alt="Character 2" className="w-full h-auto rounded-full bg-blue-200 p-4 hover:scale-110 transition-transform animate-float delay-100" />
+            <img src="/lovable-uploads/93a8d387-667c-4984-a691-5a229a298279.png" alt="Character 3" className="w-full h-auto rounded-full bg-yellow-200 p-4 hover:scale-110 transition-transform animate-float delay-200" />
+            <img src="/lovable-uploads/33fabd6f-5719-47be-8a67-7aada2ede8df.png" alt="Character 4" className="w-full h-auto rounded-full bg-green-200 p-4 hover:scale-110 transition-transform animate-float delay-300" />
+            <img src="/lovable-uploads/62d629d9-1b6c-4249-8953-d5124ad2726e.png" alt="Character 5" className="w-full h-auto rounded-full bg-purple-200 p-4 hover:scale-110 transition-transform animate-float delay-400" />
+            <img src="/lovable-uploads/f7b63aca-7a6e-44d0-8516-952a849cee75.png" alt="Character 6" className="w-full h-auto rounded-full bg-orange-200 p-4 hover:scale-110 transition-transform animate-float delay-500" />
+          </div>
         </div>
-        
-        {/* Character Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-16">
-          <img src="/lovable-uploads/420cc069-f2b6-4b4b-9fde-6137e9f7ceee.png" alt="Character 1" className="w-full h-auto rounded-full bg-pink-200 p-4 hover:scale-110 transition-transform" />
-          <img src="/lovable-uploads/4ef1f7e3-232a-4005-bd45-67561ee2beef.png" alt="Character 2" className="w-full h-auto rounded-full bg-blue-200 p-4 hover:scale-110 transition-transform" />
-          <img src="/lovable-uploads/93a8d387-667c-4984-a691-5a229a298279.png" alt="Character 3" className="w-full h-auto rounded-full bg-yellow-200 p-4 hover:scale-110 transition-transform" />
-          <img src="/lovable-uploads/33fabd6f-5719-47be-8a67-7aada2ede8df.png" alt="Character 4" className="w-full h-auto rounded-full bg-green-200 p-4 hover:scale-110 transition-transform" />
-          <img src="/lovable-uploads/62d629d9-1b6c-4249-8953-d5124ad2726e.png" alt="Character 5" className="w-full h-auto rounded-full bg-purple-200 p-4 hover:scale-110 transition-transform" />
-          <img src="/lovable-uploads/f7b63aca-7a6e-44d0-8516-952a849cee75.png" alt="Character 6" className="w-full h-auto rounded-full bg-orange-200 p-4 hover:scale-110 transition-transform" />
-        </div>
+      </section>
 
+      {/* Story Section */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-8">THE STORY BEHIND xDICKS</h2>
+            <div className="prose prose-lg mx-auto">
+              <p className="text-xl text-gray-600 mb-6">
+                In a world where digital art meets mischief, the xDicks emerged from the creative depths of the internet. These peculiar creatures aren't your ordinary NFTs – they're a celebration of humor, absurdity, and the pure joy of collecting something truly unique.
+              </p>
+              <p className="text-xl text-gray-600 mb-6">
+                Each xDick has its own personality: from the caped crusader who fights for justice with style, to the sleepy dreamer who floats on clouds, to the mariachi enthusiast who brings the party wherever they go. They're more than just digital assets; they're a community of misfits waiting to find their forever homes.
+              </p>
+              <p className="text-xl text-gray-600">
+                Join the xDick revolution and own a piece of internet history. Whether you're a seasoned NFT collector or just someone who appreciates the quirkier side of life, there's an xDick waiting for you. Just remember – they might be under your bed right now!
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Collections Section */}
