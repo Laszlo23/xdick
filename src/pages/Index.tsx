@@ -1,8 +1,28 @@
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import { ArrowRight } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 const Index = () => {
+  const faqItems = [
+    {
+      question: "What are NFTs?",
+      answer: "NFTs (Non-Fungible Tokens) are unique digital assets stored on a blockchain. Each xDick NFT is one-of-a-kind and cannot be replicated, making it truly special and collectible."
+    },
+    {
+      question: "How do I get one?",
+      answer: "You can purchase xDick NFTs directly through OpenSea marketplace. Simply connect your crypto wallet, browse our collection, and make your purchase using ETH (Ethereum)."
+    },
+    {
+      question: "How do I make sure my NFT is unique?",
+      answer: "Each xDick NFT has a unique identifier on the blockchain that proves its authenticity and ownership. You can verify this through the blockchain explorer or OpenSea's verification system."
+    },
+    {
+      question: "Can I resell my NFT?",
+      answer: "Absolutely! You can list your xDick NFT for sale on OpenSea or other NFT marketplaces at any time. The value may increase based on market demand and rarity."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-[#F1F0FB] text-black">
       <Navbar />
@@ -85,20 +105,18 @@ const Index = () => {
       <section className="container mx-auto px-4 py-20">
         <h2 className="text-4xl font-bold mb-12">WAIT, I NEED TO KNOW SOMETHING...</h2>
         <div className="space-y-6 max-w-3xl mx-auto">
-          {[
-            "What are NFTs?",
-            "How do I get one?",
-            "How do I make sure my NFT is unique?",
-            "Can I resell my NFT?"
-          ].map((question, index) => (
-            <div 
-              key={index}
-              className="flex items-center justify-between p-6 bg-white rounded-xl hover:shadow-lg transition-shadow cursor-pointer group"
-              onClick={() => console.log(`Clicked ${question}`)}
-            >
-              <span className="text-xl font-bold">{question}</span>
-              <ArrowRight className="text-[#0066FF] transition-transform group-hover:translate-x-2" />
-            </div>
+          {faqItems.map((item, index) => (
+            <Collapsible key={index} className="w-full">
+              <CollapsibleTrigger className="flex items-center justify-between w-full p-6 bg-white rounded-xl hover:shadow-lg transition-all group">
+                <span className="text-xl font-bold">{item.question}</span>
+                <ArrowRight className="text-[#0066FF] transition-transform group-hover:translate-x-2 group-data-[state=open]:rotate-90" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="overflow-hidden">
+                <div className="p-6 bg-white/50 rounded-b-xl">
+                  <p className="text-gray-600">{item.answer}</p>
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
           ))}
         </div>
       </section>
